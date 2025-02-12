@@ -1,94 +1,136 @@
-# #i am learning a python language
-# #basic code of python
-print("hello world")
-# # write a program to print twinkle twinkle little star poem in python
-# # here we use double triple double cot and we use triple single cot to print multilines
-print("""Song Lyrics
-Twinkle twinkle little star.
-How I wonder what you are.
-Up above the world so high.
-Like a diamond in the sky.
-Twinkle twinkle little star.
-How I wonder what you are.""")
+# write a program to store seven fruits in a list entered by user
+fruits = []
+f1 = input("enter the fruits name :")
+fruits.append(f1)
+f2 = input("enter the fruits name :")
+fruits.append(f2)
+f3 = input("enter the fruits name :")
+fruits.append(f3)
+f4 = input("enter the fruits name :")
+fruits.append(f4)
+f5 = input("enter the fruits name :")
+fruits.append(f5)
+f6 = input("enter the fruits name :")
+fruits.append(f6)
+f7 = input("enter the fruits name :")
+fruits.append(f7)
+print(fruits)
 
-# # Write a Python program to print the contents of a directory using the OS module. Search online for the function that does that.
-import os   
-# # Specify the directory path
-directory_path = '/'
+# write a program to accept marks of 6 students and display them in a sorted way
+marks = []
+m1 = int(input("enter the marks:"))
+marks.append(m1)
+m2 = int(input("enter the marks:"))
+marks.append(m2)
+m3 = int(input("enter the marks:"))
+marks.append(m3)
+m4 = int(input("enter the marks:"))
+marks.append(m4)
+m5 = int(input("enter the marks:"))
+marks.append(m5)
+m6 = int(input("enter the marks:"))
+marks.append(m6)
+marks.sort()
+print(marks)
 
-# # List all entries in the specified directory
-contents = os.listdir(directory_path)
+# check that tuple type cannot be changed in python
+tuple = (2,6,9,"Abhishek")
+tuple[2] = "Abhi"
+print(tuple)
+print(type(tuple))
 
-# # Print the entries
-for item in contents:
-    print(item)
+# write a program to sum a list of 4 numbers
+list = [1,89,76,98]
+print(sum(list))
 
-# # some practice questions on variables datatypes
-# #  1st wap on add two numbers
-a = int(input("enter first number :"))
-b = int(input("enter second number :"))
-sum = a + b
-print(sum)
+# write a program to count the number of zeroesin the following tuple:
+tup = (1,3,4,0,4,0,0,8,0,6,0,4)
+print(tup.count(0))
 
-# # 2nd Write a Python program to find remainder when
-# # a number is divided by z
-a = 66
-b = 5
-print("the remainder is :", a % b)
+# write a program in to create a dictionary of hindi words as their english translation
+# provide user with an option to look it up
+words ={
+    "madad" : "help",
+    "kutta" : "dog",
+    "class" : "kaksha"
+}
 
-# # 3rd Check the type of the variable assigned using input () function
-a = input("enter the value of a :")
-print(type(a))
+word = input("enter the word you want meaning of :")
+print(words[word])
 
-# # 4th use Comparison operators to find out whether a given Variable 'a' is greater than 'b' or not. Take a = 34 and b=80
-a = 34
-b = 80 
-print(a > b)
+# write a program to input eight numbers from the user and siplay all the unique numbers(once)
+s = set()
+n = input("Enter number: ")
+s.add(int(n))  
+n = input("Enter number: ")
+s.add(int(n))  
+n = input("Enter number: ")
+s.add(int(n))  
+n = input("Enter number: ")
+s.add(int(n))  
+n = input("Enter number: ")
+s.add(int(n))  
+n = input("Enter number: ")
+s.add(int(n))  
+n = input("Enter number: ")
+s.add(int(n))  
+n = input("Enter number: ")
+s.add(int(n))  
 
-# # 5th Write a python program to find average of two
-# # numbers entered by the user
-a = int(input("enter the first number :"))
-b = int(input("enter the second number :"))
-print(" the average of two number is :" ,(a + b) / 2)
+print(s)
 
-# # 6th Write a python program to calculate the square of the number entered by the user 
-a = int(input("enter your number :"))
-print("the sqaure of the number :" , a ** 2)
+# can we have a set with 18(int)
+# and "18" (str) as a value in it?
+s = set()
+s.add(18)
+s.add("18")
+print(s)
 
-a = "nfwhfwnjnwmicjwojciwjiwkj"
-print (a [1 : 9]) 
-print(a [1 : 9 : 4])
+# what will be the length of following set s:
+s = set()
+s.add(20)
+s.add(20.0)
+s.add('20') #length of s after these operations
+print(len(s))
 
-# # escape sequence characters 
-a = "Abhishek is a student \n also he is 21 years \"old\" \t better "
-print(a)
+# what is the type of 's'
+s ={}
+print(type(s))
+# output : <class 'dict'>
 
-# # Write a Python program to display a user entered name followed by Good Afternoon using 
-# # input function
-name = input("enter the name :")
-print("Good Afternoon" , name)
+# create an empty dictionary. allow 4 friends to enter their favorite language
+# as value and use key as their names.assume that the names are unique
+d = {}
 
-# # Write a program to fill in a letter template given below with
-# # name and date.
-letter = '''Dear <|NAME|>
-  You are selected!
-  <|Date|> '''
-print(letter.replace("<|NAME|>", "Abhishek").replace("<|Date|>", "08 February 2025"))
+name = input("Enter friends name: ")
+lang = input("Enter Language name: ")
+d.update({name: lang})
 
-# #write a program to detect double spaces in a string 
-# #replace the double space from problem 3 with single spaces
-name = "Abhishek is a  good boy"
-print(name.find("  "))
-print(name.replace("  "," "))
+name = input("Enter friends name: ")
+lang = input("Enter Language name: ")
+d.update({name: lang})
 
-# # white a progrom to format the following letter using escape sequence characters.
-letter = "Dear Harry,\n\tThis Python Course is nice.\n Thanks!"
-print(letter)
-#  loop code given by friend 
-name = "Abhishek"
-A = int(input("enter the number :"))
-for i in range (A):
-    print(name) 
+name = input("Enter friends name: ")
+lang = input("Enter Language name: ")
+d.update({name: lang})
+
+name = input("Enter friends name: ")
+lang = input("Enter Language name: ")
+d.update({name: lang})
+
+
+print(d)
+
+#if the names of 2 friends are same what will happen to the program in problem 6?
+# The values entered later will be updated
+# if languages of two friends are same; what will happen to the program in problem 6?
+# Nothing will happen. The values can be same
+
+# can you change the values inside a list which contained in set S?
+s = {8,7,12,"Abhishek",[1,2]}
+s[4][0] = 9
+# it will give a error we cannot include list in a set and list is unhashable
+
     
 
 
