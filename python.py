@@ -341,3 +341,26 @@ n = int(input("Enter the number: "))
 
 for i in range(1, 11):
     print(f"{n} X {11 -i} = {n*(11-i)}")
+
+
+# FUNCTIONS AND RECURSION
+# write a program using function to find greatest of 3 numbers
+
+def greatest(a,b,c):
+    
+    if (a>b and a>c):
+        return a
+    elif (b>a and b>c):
+        return a
+    elif (c>a and c>b):
+        return c
+
+print(greatest(12,78,98))
+
+# write a python program using function to convert celsius into fahrenheit
+def c_to_f(c):
+    return (9/5) * c + 32
+
+c = float(input("Enter the temperature in Celsius: "))
+f = c_to_f(c)
+print(f"{round(f, 2)}° Fahrenheit")
