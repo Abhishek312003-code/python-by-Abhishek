@@ -194,6 +194,45 @@ if word == word[::-1]:
 else:
     print("its not a palindrome")
 
+# Print the multiplication table of a number using a for loop
+num = int(input("enter the number :"))
+print("multiplication table of :",num)
+for i in range (11):
+    print(f"{num} * {i} = {num * i}")
+
+# Print all prime numbers between 1 to 50 using a loop.
+for num in range(2,51):
+  for i in range(2,num):
+    if num % i == 0:
+       break
+  else:
+    print(num, end=" ")
+
+# Write a program to find the sum of digits of a number
+n = int(input("Enter the number: "))
+sum_of_digits = 0
+while n > 0:
+    sum_of_digits += n % 10
+    n //= 10
+print("sum of digits :",sum_of_digits)
+
+# Take an input n and print a right-angled triangle pattern using *
+n = int(input("enter the number of rows:"))
+for i in range(n+1):
+    print("*" *i)
+
+# Print the Fibonacci series up to n terms using a while loop.
+n = int(input("enter the number of terms:"))  # Ask the user for the number of terms
+a,b = 0,1  # Initialize the first two Fibonacci numbers (0 and 1)
+count = 0  # Initialize a counter to keep track of how many terms have been printed
+while count < n:  # Loop will continue until we print 'n' terms
+    print(a , end = " ") # Print the current value of 'a' (Fibonacci number)
+    a,b = b,a +b   # Update 'a' and 'b' for the next Fibonacci numbers
+    count += 1  #increase the counter by 1 to track printed terms.
+
+
+
+
 
 
 
