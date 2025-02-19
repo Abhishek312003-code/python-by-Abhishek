@@ -229,16 +229,3 @@ while count < n:  # Loop will continue until we print 'n' terms
     print(a , end = " ") # Print the current value of 'a' (Fibonacci number)
     a,b = b,a +b   # Update 'a' and 'b' for the next Fibonacci numbers
     count += 1  #increase the counter by 1 to track printed terms.
-
-
-
-
-
-
-
-
-
-
-
-
-

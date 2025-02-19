@@ -365,3 +365,5 @@ c = float(input("Enter the temperature in Celsius: "))
 f = c_to_f(c)
 print(f"{round(f, 2)}° Fahrenheit")
 
+
+
