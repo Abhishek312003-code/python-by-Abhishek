@@ -229,3 +229,65 @@ while count < n:  # Loop will continue until we print 'n' terms
     print(a , end = " ") # Print the current value of 'a' (Fibonacci number)
     a,b = b,a +b   # Update 'a' and 'b' for the next Fibonacci numbers
     count += 1  #increase the counter by 1 to track printed terms.
+
+# Write a function that takes two numbers as arguments and returns their sum, difference, product, and quotient.
+def calculate_arithmetic_operations (a,b):
+    sum_of_digits = a + b 
+    difference = a - b 
+    product = a * b
+    quotient = a / b if b != 0 else "undefined (division by zero)"
+    return (sum_of_digits,difference,product,quotient)
+num1 = int(input("enter the first number :"))
+num2 = int(input("enter the second number :"))
+
+result = calculate_arithmetic_operations(num1,num2)
+print("sum of two numbers is :",result[0])
+print("diffference of two numbers is :",result[1])
+print("product of two numbers is :",result[2])
+print("quotient of two numbers is :",result[3])
+
+
+# Write a function to convert kilometers to miles.
+def km_to_miles (km):
+    # conver kilommeter into miles
+    miles = km * 0.621371
+    return miles
+km = (float(input("enter the dictance in kilometers:")))
+miles = km_to_miles(km)
+print(f"{km} km is equal to {miles} miles")
+
+# Write a recursive function to calculate the factorial of a number.
+def factorial(n):
+    if n == 0 or n == 1 :
+        return 1 
+    else:
+        return n * factorial(n-1)
+num = int(input("enter the number :"))
+print(f"factorial of {num} : {factorial(num)}")    
+
+# Write a function to check whether a number is prime.
+def is_prime(n):
+    if n < 2 :
+        return False
+    for i in range(2,n):
+        if n % i == 0:
+            return False
+        return True
+num = int(input("enter the number :"))
+if is_prime(num):
+    print(f"{num} it is a prime number ")
+else:
+    print(f"{num} it is not a prime number ")
+
+# Write a recursive function to calculate the sum of first n natural numbers
+def sum_natural (n):
+    if n == 1 :
+        return 1
+    else:
+        return n + sum_natural(n-1)
+num = int(input("enter the number :"))
+print(f"sum of first {num} natural numbers is {sum_natural(num)}")
+
+
+
+    
