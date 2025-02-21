@@ -288,6 +288,43 @@ def sum_natural (n):
 num = int(input("enter the number :"))
 print(f"sum of first {num} natural numbers is {sum_natural(num)}")
 
+numbers = {1, 2, 3, 4, 5, 5}  # Duplicates ignored
+numbers.add(6)
+numbers.remove(3)
 
+print(numbers)
 
-    
+name = "Abhishek"
+age = 21
+height = 5.8  # in feet
+is_student = True
+
+print(name, age, height, is_student)
+
+a = 10
+b = 5
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+print("Floor Division:", a // b)
+print("Modulus:", a % b)
+print("Exponentiation:", a ** b)
+
+fruits = ["Apple", "Banana", "Cherry"]
+fruits.append("Mango")  # Add element
+fruits.remove("Banana")  # Remove element
+
+print(fruits)
+
+coordinates = (10, 20, 30)
+print(coordinates[0])  # Access element
+
+student = {
+    "name": "Abhishek",
+    "age": 21,
+    "course": "AI"
+}
+student["age"] = 22  # Update value
+print(student["name"])
