@@ -328,3 +328,18 @@ student = {
 }
 student["age"] = 22  # Update value
 print(student["name"])
+
+def second_largest(nums):
+    unique_nums = list(set(nums))  # Remove duplicates
+    unique_nums.sort(reverse=True)  # Sort in descending order
+    return unique_nums[1] if len(unique_nums) > 1 else None
+
+numbers = [10, 20, 4, 45, 99, 99, 20]
+print("Second largest number:", second_largest(numbers))
+
+def is_palindrome(s):
+    cleaned = ''.join(s.lower().split())  # Remove spaces & convert to lowercase
+    return cleaned == cleaned[::-1]
+
+word = input("Enter a word: ")
+print("Palindrome" if is_palindrome(word) else "Not a palindrome")
