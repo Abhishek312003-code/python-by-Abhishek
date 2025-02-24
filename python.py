@@ -601,6 +601,3 @@ while count < n:  # Loop will continue until we print 'n' terms
     a,b = b,a +b   # Update 'a' and 'b' for the next Fibonacci numbers
     count += 1  #increase the counter by 1 to track printed terms.
 
-
-
-

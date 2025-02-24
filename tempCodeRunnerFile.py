@@ -1,4 +1,4 @@
-# Write a program to store 10 country names entered by the user in a list and print them in reverse order.
+  # Write a program to store 10 country names entered by the user in a list and print them in reverse order.
 # Create an empty list to store country names
 countries = []
 
@@ -343,3 +343,21 @@ def is_palindrome(s):
 
 word = input("Enter a word: ")
 print("Palindrome" if is_palindrome(word) else "Not a palindrome")
+
+if (3>2) > 1:
+    print("True") # true = 1 , False = 0
+else :  
+    print("False")     #(3>2) = true then expression becomes True > 1 = 1 > 1 this is False
+
+dict = {1:2,3:4,5:6}
+result = dict.pop(3,5)
+print(result) #output = 4 (value of 3 key) if 3 do not exist then the default value come = 5
+ 
+x = 2
+y = 3
+z = x ** y + y ** x # 8 + 9 = 17
+print(z)
+
+x,y = ~15,5     #~15 = -(15 + 1) = -16
+z = x + y       #-16 + 5 = -11
+print(x,z)      # -16 -11
