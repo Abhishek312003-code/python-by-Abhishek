@@ -1,3 +1,4 @@
+
 # write a program to store seven fruits in a list entered by user
 fruits = []
 f1 = input("enter the fruits name :")
@@ -366,9 +367,6 @@ f = c_to_f(c)
 print(f"{round(f, 2)}° Fahrenheit")
 
 
-
-
-
 # Write a program to store 10 country names entered by the user in a list and print them in reverse order.
 # Create an empty list to store country names
 countries = []
@@ -601,3 +599,78 @@ while count < n:  # Loop will continue until we print 'n' terms
     a,b = b,a +b   # Update 'a' and 'b' for the next Fibonacci numbers
     count += 1  #increase the counter by 1 to track printed terms.
 
+
+
+
+# how do you prevent a python print() function to print a new line at the end
+print("a")
+print("b")
+print("c",end="")
+print("d",end="") #end function eliminates the new or next line
+
+# write a recursive function to calculate the sum of n natural numbers
+def sum (n):
+    if (n == 1) :
+        return 1
+    return sum (n-1) +n
+print(sum(8)) #1+2+3+4+5+6+7+8
+
+# write a python function to print first n lines of the following patteren
+# ***
+# **    - for n = 3
+# *
+def patteren(n):
+    if (n==0):
+        return
+    print("*" * n)
+    patteren(n-1)
+patteren(3)
+
+# write a python function which converts inches to cm
+def inches_to_cms(inches):
+    return inches * 2.54
+n = int(input("enter the value in inches :"))
+print(f"the corresponding value in cms is {inches_to_cms(n)}")
+
+# write a python function to remove a given word from a list ad strip it at the same time
+def rem(l,word):
+    n = []
+    for item in l :
+        if not(item == word):
+            n.append(item.strip(word))
+    return n
+l =["Abhishek", "mohan", "choudhary", "jain", "singh"]
+print(rem(l,"an"))
+
+# write a python function to print multiplication table of given number
+def multiplication(n):
+    for i in range(1,11):
+        print(f"{n} * {i} = {n*i}")
+multiplication(5)
+
+# PROJECT
+import random
+computer = random.choice([-1,0,1])
+youstr = input("enter your choice:")
+youDict = {"s":1,"w":-1,"g":0}
+revereseDict = {1:"Snake",-1: "Water", 0:"Gun"}
+you = youDict[youstr]
+
+print(f"you chose {revereseDict[you]}\nComputer chose{revereseDict[computer]}")
+if(computer== you):
+    print("its a draw")
+else:
+    if(computer ==-1 and you == 1):
+        print("you win")
+    elif(computer ==-1 and you == 0):
+        print("you win")
+    elif(computer ==1 and you == -1):
+        print("you win")
+    elif(computer ==1 and you == 0):
+        print("you win")
+    elif(computer ==0 and you == -1):
+        print("you win")
+    elif(computer ==0 and you == 1):
+        print("you win")
+    else:
+        print("something went wrong")
