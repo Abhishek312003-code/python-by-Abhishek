@@ -674,3 +674,25 @@ else:
         print("you win")
     else:
         print("something went wrong")
+
+
+with open("example.txt", "w") as file:
+    file.write("Hello, this is a test file.")
+
+with open("example.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+with open("example.txt", "a") as file:
+    file.write("\nAdding a new line to the file.")
+
+with open("example.txt", "r") as file:
+    for line in file:
+        print(line.strip())
+
+with open("example.txt", "r") as file:
+    first_line = file.readline()  
+    print("First line:", first_line)
+
+    remaining_lines = file.readlines()  
+    print("Remaining lines:", remaining_lines)
