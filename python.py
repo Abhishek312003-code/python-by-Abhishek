@@ -696,3 +696,60 @@ with open("example.txt", "r") as file:
 
     remaining_lines = file.readlines()  
     print("Remaining lines:", remaining_lines)
+
+# OOPS in Python
+class Student:
+    def __init__(self, name, age):
+        self.name = name  # Instance variable
+        self.age = age
+
+    def display(self):
+        print(f"Student Name: {self.name}, Age: {self.age}")
+
+# Creating an object
+student1 = Student("Abhishek", 21)
+student1.display()
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  
+    def deposit(self, amount):
+        self.__balance += amount
+    def get_balance(self):
+        return self.__balance
+
+# Creating an object
+account = BankAccount(1000)
+account.deposit(500)
+print("Balance:", account.get_balance())
+class Animal:
+    def speak(self):
+        print("Some sound")
+class Dog(Animal):  
+    def speak(self):
+        print("Bark!")
+dog = Dog()
+dog.speak()
+
+class Bird:
+    def fly(self):
+        print("Birds can fly")
+class Sparrow(Bird):
+    def fly(self):
+        print("Sparrow can fly high!")
+class Penguin(Bird):
+    def fly(self):
+        print("Penguins cannot fly")
+
+# Using polymorphism
+for bird in [Sparrow(), Penguin()]:
+    bird.fly()
+from abc import ABC, abstractmethod
+class Vehicle(ABC):  # Abstract class
+    @abstractmethod
+    def start(self):
+        pass
+class Car(Vehicle):
+    def start(self):
+        print("Car is starting...")
+car = Car()
+car.start()
